@@ -1,0 +1,357 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  background-image: url(Fondo.jpg);
+  background-attachment: fixed;
+}
+nav{
+  background: #1b1b1b;
+}
+nav::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.Container{
+  margin-top: 5px;
+  float: left;
+  padding-left: 217px;
+}
+.Container img{
+  height: 60px;
+  width: 100px;
+}
+nav ul{
+  list-style: none;
+  float: right;
+  margin-right: 222px;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #1b1b1b;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #66ffff;
+}
+nav ul ul li a:hover{
+  color:cyan;
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  opacity: 0;
+  border-top: 3px solid cyan;
+  visibility: hidden;
+  transition: .3s;
+}
+nav ul li:hover > ul{
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position:relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0,.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+.Banner{
+  margin-top: 20px;
+}
+.Banner img{
+  display: block;
+  margin: auto;
+}
+.sidebar{
+  position: fixed;
+  left: -250px;
+  top: 70px;
+  width: 240px;
+  height: 100%;
+  background: #1b1b1b;
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background:#1b1b1b;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  color: white;
+  font-size: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid black;
+  transition: .3s;
+}
+.sidebar ul li:hover a{
+  padding-left: 50px;
+  color: #66ffff;
+}
+.sidebar ul a li{
+  margin-right: 16px;
+}
+
+#check{
+  display: none;
+}
+label #btn, label #cancle{
+  position: absolute;
+  cursor: pointer;
+
+  border-radius: 3px;
+}
+label #btn{
+  left: 40px;
+  top: 15px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s ease;
+}
+label #cancle{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: white;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancle{
+  left: 195px;
+}
+footer{
+  margin-top: 50px;
+  position: relative;
+  bottom:0px;
+  width: 100%;
+  background: #1b1b1b;
+  color: white;
+}
+.main-content{
+  display: flex;
+}
+
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+}
+.left .contet p{
+  text-align: justify;
+}
+
+.Principal{
+  margin-top: 30px;
+  padding-left: 230px;
+  padding-right: 240px;
+  background: black;
+}
+.Principal h1{
+  color: red;
+  text-align: center;
+}
+.Principal p{
+  font-size: 16px;
+  line-height: 25px;
+  font-family:inherit;
+  font-weight: bold;
+  color: white;
+}
+.origenes{
+  margin-top: 30px;
+  padding-left: 230px;
+  padding-right: 240px;
+  background: black;
+}
+.origenes h1{
+  color: red;
+  text-align: center;
+}
+.origenes p{
+  font-size: 16px;
+  line-height: 25px;
+  font-family:inherit;
+  font-weight: bold;
+  color: white;
+}
+.parents{
+
+  display: flex;
+  margin-left: 235px;
+  margin-right: 235px;
+  background: black;
+  padding: 50px;
+}
+.mapafoto1 img{
+  width: 300px;
+  height: 300px;
+}
+.mapafoto2 img{
+  width: 300px;
+  height: 300px;
+  margin-left: 225px;
+}
+.mapafoto3 img{
+  width: 300px;
+  height: 300px;
+  margin-left: 200px;
+}
+.mapatexto{
+  margin-top: 30px;
+  background: black;
+  padding-left: 230px;
+  padding-right: 240px;
+}
+.mapatexto h1{
+  color: Red;
+  text-align: center;
+}
+.mapatexto p{
+  font-size: 16px;
+  line-height: 25px;
+  font-family:inherit;
+  font-weight: bold;
+  color: white;
+}
+.heroesprincipal{
+  margin-top: 30px;
+  margin-left:230px;
+  margin-right:240px;
+  background: black;
+}
+.heroesprincipal img{
+  width: 1500px;
+  height: 700px;
+}
+.heroesprincipal h1{
+  color: Red;
+  text-align: center;
+}
+.heroesprincipal p{
+  font-size: 16px;
+  line-height: 25px;
+  font-family:inherit;
+  font-weight: bold;
+  color: white;
+}
+.habilidades{
+  margin-top: 30px;
+  margin-left:230px;
+  margin-right:240px;
+  background: black;
+}
+.habilidades h1{
+  color: Red;
+  text-align: center;
+}
+.habilidades p{
+  font-size: 16px;
+  line-height: 25px;
+  font-family:inherit;
+  font-weight: bold;
+  color: white;
+}
+.tabla{
+  color: black;
+  z-index: 1;
+  opacity: .7;
+}
+table{
+  background: white;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+}
+th{
+  background:#eeeeee;
+}
+tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.Torneos{
+  margin-top: 30px;
+  margin-left:230px;
+  margin-right:240px;
+  background: black;
+}
+.Torneos h1{
+  margin-left: 200px;
+  color: Red;
+  text-align: center;
+}
+.padres{
+  display: flex;
+  margin-left: 235px;
+  margin-right: 235px;
+  background: black;
+  padding: 50px;
+}
+.torneofoto1 img{
+  width: 750px;
+  height: 500px;
+}
+.torneofoto2 img{
+  margin-right: 50px;
+  width: 750px;
+  height: 500px;
+}
+.torneofoto3 img{
+  width: 700px;
+  height: 500px;
+}
